@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="120" id="9gm-51-iQI">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="120" id="9gm-51-iQI" customClass="ParallaxCell" customModule="Parallax" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9gm-51-iQI" id="X7h-kH-Kkg">
@@ -46,6 +46,10 @@
                                         <constraint firstItem="YgM-ea-Jiv" firstAttribute="leading" secondItem="X7h-kH-Kkg" secondAttribute="leading" id="p8h-qM-Zpl"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageCell" destination="tfN-3k-TLq" id="SaV-KB-5rf"/>
+                                    <outlet property="textCell" destination="YgM-ea-Jiv" id="23U-Sf-gVj"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

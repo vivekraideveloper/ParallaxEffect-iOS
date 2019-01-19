@@ -10,15 +10,35 @@ import UIKit
 
 class ParallaxCell: UITableViewCell {
 
+    @IBOutlet weak var imageCell: UIImageView!
+    @IBOutlet weak var textCell: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func configureCell(withImage image: UIImage, descriptionText text: String){
+        self.imageCell.image = image
+        self.textCell.text = text
+    }
+    
+    func setParallaxEffect(){
+        let min = CGFloat(-30)
+        let max = CGFloat(+30)
+        
+        let xMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.x", type: .tiltAlongHorizontalAxis)
+        xMotion.minimumRelativeValue = min
+        xMotion.maximumRelativeValue = max
+        
+        let yMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.y", type: .tiltAlongVerticalAxis)
+        yMotion.minimumRelativeValue = min
+        yMotion.maximumRelativeValue = max
+        
+        let motionEffectsGroup = UIMotionEffectGroup()
+        motionEffectsGroup.motionEffects = [xMotion, yMotion]
+        imageCell.addMotionEffect(motionEffectsGroup)
+        
     }
 
 }

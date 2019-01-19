@@ -14,6 +14,7 @@ class ParallaxTableVC: UITableViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = 140
         
     }
     
@@ -22,15 +23,16 @@ class ParallaxTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return imagesArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) else {
-            return 
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ParallaxCell else {
+            return UITableViewCell()
         }
-        
+        cell.configureCell(withImage: imagesArray[indexPath.row]!, descriptionText: namesArray[indexPath.row])
+        cell.setParallaxEffect()
         return cell
     }
     

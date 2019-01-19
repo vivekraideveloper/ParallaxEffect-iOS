@@ -12,6 +12,8 @@
 		80BC1CBD21F2FA1F00A0ADF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BC1CBB21F2FA1F00A0ADF4 /* Main.storyboard */; };
 		80BC1CBF21F2FA2000A0ADF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80BC1CBE21F2FA2000A0ADF4 /* Assets.xcassets */; };
 		80BC1CC221F2FA2000A0ADF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BC1CC021F2FA2000A0ADF4 /* LaunchScreen.storyboard */; };
+		80BC1CCC21F2FDE700A0ADF4 /* ParallaxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BC1CCB21F2FDE700A0ADF4 /* ParallaxCell.swift */; };
+		80BC1CCE21F2FF4500A0ADF4 /* Images+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BC1CCD21F2FF4500A0ADF4 /* Images+Names.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		80BC1CBE21F2FA2000A0ADF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80BC1CC121F2FA2000A0ADF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80BC1CC321F2FA2000A0ADF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80BC1CCB21F2FDE700A0ADF4 /* ParallaxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCell.swift; sourceTree = "<group>"; };
+		80BC1CCD21F2FF4500A0ADF4 /* Images+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Images+Names.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,32 @@
 		80BC1CB621F2FA1F00A0ADF4 /* Parallax */ = {
 			isa = PBXGroup;
 			children = (
+				80BC1CCA21F2FDA900A0ADF4 /* Controller */,
+				80BC1CC921F2FD9F00A0ADF4 /* View */,
 				80BC1CB721F2FA1F00A0ADF4 /* AppDelegate.swift */,
-				80BC1CB921F2FA1F00A0ADF4 /* ParallaxTableVC.swift */,
 				80BC1CBB21F2FA1F00A0ADF4 /* Main.storyboard */,
 				80BC1CBE21F2FA2000A0ADF4 /* Assets.xcassets */,
 				80BC1CC021F2FA2000A0ADF4 /* LaunchScreen.storyboard */,
 				80BC1CC321F2FA2000A0ADF4 /* Info.plist */,
+				80BC1CCD21F2FF4500A0ADF4 /* Images+Names.swift */,
 			);
 			path = Parallax;
+			sourceTree = "<group>";
+		};
+		80BC1CC921F2FD9F00A0ADF4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80BC1CCB21F2FDE700A0ADF4 /* ParallaxCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		80BC1CCA21F2FDA900A0ADF4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				80BC1CB921F2FA1F00A0ADF4 /* ParallaxTableVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80BC1CCC21F2FDE700A0ADF4 /* ParallaxCell.swift in Sources */,
 				80BC1CBA21F2FA1F00A0ADF4 /* ParallaxTableVC.swift in Sources */,
+				80BC1CCE21F2FF4500A0ADF4 /* Images+Names.swift in Sources */,
 				80BC1CB821F2FA1F00A0ADF4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
